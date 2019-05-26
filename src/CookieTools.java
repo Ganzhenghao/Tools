@@ -8,6 +8,12 @@ import javax.servlet.http.Cookie;
  * Version 1.0
  **/
 public class CookieTools {
+    /**
+     *  找到相应的Cookie
+     * @param cookieName
+     * @param cookies
+     * @return Cookie
+     */
     public static Cookie findCookie(String cookieName, Cookie[] cookies) {
         if (cookies != null) {
             for (Cookie c : cookies) {
