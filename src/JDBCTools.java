@@ -53,24 +53,56 @@ public class JDBCTools {
         }
         return c;
     }
-    public static void close (Connection connection , Statement statement , ResultSet resultSet){
+    /**
+     * 释放资源
+     * @param conn
+     * @param st
+     * @param rs
+     */
+    public static void close(Connection conn , Statement st , ResultSet rs){
+        closeRs(rs);
+        closeSt(st);
+        closeConn(conn);
+    }
+    public static void close(Connection conn , Statement st){
+        closeSt(st);
+        closeConn(conn);
+    }
+
+
+    private static void closeRs(ResultSet rs){
         try {
-            assert connection != null;
-            connection.close();
+            if(rs != null){
+                rs.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally{
+            rs = null;
         }
+    }
+
+    private static void closeSt(Statement st){
         try {
-            assert statement != null;
-            statement.close();
+            if(st != null){
+                st.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally{
+            st = null;
         }
+    }
+
+    private static void closeConn(Connection conn){
         try {
-            assert resultSet != null;
-            resultSet.close();
+            if(conn != null){
+                conn.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally{
+            conn = null;
         }
     }
 }
