@@ -68,6 +68,10 @@ public class JDBCTools {
         closeSt(st);
         closeConn(conn);
     }
+    public static void close(Statement st , ResultSet rs){
+        closeSt(st);
+        closeRs(rs);
+    }
 
 
     private static void closeRs(ResultSet rs){
