@@ -1,5 +1,6 @@
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
+import javax.sql.DataSource;
 import java.sql.*;
 
 /**
@@ -15,6 +16,14 @@ public class JDBCTools_C3P0 {
 
     static {
         comboPooledDataSource = new ComboPooledDataSource();
+    }
+
+    /**
+     *
+     * @return 返回数据库连接池
+     */
+    public static DataSource getDataSource(){
+        return comboPooledDataSource;
     }
 
     /**
