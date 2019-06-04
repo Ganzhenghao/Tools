@@ -1,11 +1,14 @@
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.sql.DataSource;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * ClassName JDBCTools_C3P0
- * Description TODO
+ * Description JDBCTools C3P0版本
  * Author Ganzhenghao
  * Date  2019/6/2 19:08
  * Version 1.0
@@ -31,7 +34,7 @@ public class JDBCTools_C3P0 {
      *
      * @return
      */
-    public static Connection newInstance() throws SQLException {
+    public static Connection getConnection() throws SQLException {
         return comboPooledDataSource.getConnection();
     }
 
@@ -66,8 +69,6 @@ public class JDBCTools_C3P0 {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            rs = null;
         }
     }
 
@@ -78,8 +79,6 @@ public class JDBCTools_C3P0 {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            st = null;
         }
     }
 
@@ -90,8 +89,6 @@ public class JDBCTools_C3P0 {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            conn = null;
         }
     }
 }
