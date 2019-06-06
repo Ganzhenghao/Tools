@@ -1,5 +1,6 @@
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
@@ -20,11 +21,12 @@ public class JDBCTools {
         Properties properties = new Properties();
 
         try {
-            /*
-            * 使用类加载器, 加载src下的资源文件
-            * FileInputStream fis = JDBCTools.class.getClassLoader().getResourceAsStream("jdbc.properties");
-            * */
-            properties.load(new FileInputStream("jdbc.properties"));
+
+
+            //使用类加载器, 加载src下的资源文件
+            //InputStream fis = JDBCTools.class.getClassLoader().getResourceAsStream("jdbc.properties");
+            properties.load(new FileInputStream("jdbc.properties")); //这是直接加载工程根目录下的文件
+            //properties.load(fis);
             driverClass = properties.getProperty("driverClass");
             url = properties.getProperty("url");
             user = properties.getProperty("user");
