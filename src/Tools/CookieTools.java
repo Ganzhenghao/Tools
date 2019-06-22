@@ -1,7 +1,9 @@
+package Tools;
+
 import javax.servlet.http.Cookie;
 
 /**
- * ClassName CookieTools
+ * ClassName Tools.CookieTools
  * Description Cookie方法集合
  * Author Ganzhenghao
  * Date  2019/5/21 17:08:10

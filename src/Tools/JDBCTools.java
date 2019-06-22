@@ -1,3 +1,5 @@
+package Tools;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -5,7 +7,7 @@ import java.sql.*;
 import java.util.Properties;
 
 /**
- * ClassName JDBCTools
+ * ClassName Tools.JDBCTools
  * Description
  * Author Ganzhenghao
  * Date 2018/12/18  14:47
@@ -24,7 +26,7 @@ public class JDBCTools {
 
 
             //使用类加载器, 加载src下的资源文件
-            //InputStream fis = JDBCTools.class.getClassLoader().getResourceAsStream("jdbc.properties");
+            //InputStream fis = Tools.JDBCTools.class.getClassLoader().getResourceAsStream("jdbc.properties");
             properties.load(new FileInputStream("jdbc.properties")); //这是直接加载工程根目录下的文件
             //properties.load(fis);
             driverClass = properties.getProperty("driverClass");

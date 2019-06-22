@@ -1,14 +1,17 @@
+package Tools;
+
+
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.mysql.jdbc.Statement;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 /**
- * ClassName JDBCTools_DRUID
+ * ClassName Tools.JDBCTools_DRUID
  * Description TODO
  * Author Ganzhenghao
  * Date  2019/6/16 18:12

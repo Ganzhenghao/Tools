@@ -1,3 +1,5 @@
+package Tools;
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.sql.DataSource;
@@ -7,8 +9,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * ClassName JDBCTools_C3P0
- * Description JDBCTools C3P0版本
+ * ClassName Tools.JDBCTools_C3P0
+ * Description Tools.JDBCTools C3P0版本
  * Author Ganzhenghao
  * Date  2019/6/2 19:08
  * Version 1.0
