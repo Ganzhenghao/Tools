@@ -29,6 +29,7 @@ public class ConnectionUtils {
             if (conn == null) {
                 //3.从数据源中获取一个连接，并且存入ThreadLocal中
                 conn = dataSource.getConnection();
+                conn.setAutoCommit(false);
                 tl.set(conn);
             }
             //4.返回当前线程上的连接
